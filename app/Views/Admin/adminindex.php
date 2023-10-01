@@ -68,15 +68,16 @@
                                                 data-category="<?= $menu['productCategory'] ?>"
                                                 data-quantity="<?= $menu['quantity'] ?>"
                                                 data-name="<?= $menu['productName'] ?>"
-                                                data-des="<?= $menu['productDescription'] ?>"><i
-                                                    class="fas fa-edit"></i></a></td>
+                                                data-des="<?= $menu['productDescription'] ?>"
+                                               
+                                                ><i class="fas fa-edit"></i></a></td>
                                         
-
-                                        <td class="text-center" style="cursor: pointer; font-size: 15px;">
-                                            <a href="#" data-toggle="modal" data-target="#deleteModal" data-id="<?= $menu['id'] ?>">
-                                                <i class="fas fa-trash"></i> <!-- Add the delete button icon here -->
-                                            </a>
-                                        </td>
+                                                <td>
+                                                <form action="/UserController/deletethistoo" method="post">
+                <input type="hidden" name="id" value="<?= $menu['id'] ?>">
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+                                                
 
 
                                             

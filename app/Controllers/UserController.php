@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Controllers;
-
+use App\Models\ProductModel;
+use App\Models\AdminModel;
 class UserController extends BaseController
 {
 
@@ -14,6 +15,7 @@ class UserController extends BaseController
         $this->productmodel = new \App\Models\ProductModel();
         $this->adminmodel = new \App\Models\AdminModel();
     }
+
 
     public function logindex()
     {
@@ -238,6 +240,16 @@ public function deleteProduct() {
     } else {
         // Handle invalid request method (e.g., show an error message)
         echo "Invalid request method.";
+    }
+}
+
+public function deletethistoo()
+{
+    $productModel = new ProductModel();
+    $id = $this->request->getPost('id');
+    
+    if ($productModel->delete($id)) { // Remove the extra $ symbol here
+        return redirect()->to('adminindex');
     }
 }
 

@@ -23,5 +23,5 @@ $routes->get('/viewshoes', 'UserController::shoes');
 $routes->get('/viewbags', 'UserController::bags');
 $routes->get('/viewjeans', 'UserController::jeans');
 
-
+$routes->post('UserController/deletethistoo', 'UserController::deletethistoo');
 

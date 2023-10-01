@@ -1,0 +1,170 @@
+CRITICAL - 2023-10-01 19:20:29 --> Undefined variable $track
+in APPPATH\Views\Admin\adminindex.php on line 77.
+ 1 APPPATH\Views\Admin\adminindex.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $track', 'D:\\laragon\\www\\bestSeller\\app\\Views\\Admin\\adminindex.php', 77)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\bestSeller\\app\\Views\\Admin\\adminindex.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Admin/adminindex', [], true)
+ 5 APPPATH\Controllers\UserController.php(105): view('Admin/adminindex', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->adminindex()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\bestSeller\\public\\index.php')
+CRITICAL - 2023-10-01 19:20:30 --> Undefined variable $track
+in APPPATH\Views\Admin\adminindex.php on line 77.
+ 1 APPPATH\Views\Admin\adminindex.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $track', 'D:\\laragon\\www\\bestSeller\\app\\Views\\Admin\\adminindex.php', 77)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\bestSeller\\app\\Views\\Admin\\adminindex.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Admin/adminindex', [], true)
+ 5 APPPATH\Controllers\UserController.php(105): view('Admin/adminindex', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->adminindex()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\bestSeller\\public\\index.php')
+CRITICAL - 2023-10-01 19:26:53 --> Undefined property: App\Controllers\UserController::$prooductmodel
+in APPPATH\Controllers\UserController.php on line 249.
+ 1 APPPATH\Controllers\UserController.php(249): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\UserController::$prooductmodel', 'D:\\laragon\\www\\bestSeller\\app\\Controllers\\UserController.php', 249)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->deletethistoo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\bestSeller\\public\\index.php')
+CRITICAL - 2023-10-01 19:28:17 --> Undefined variable $prooductmodel
+in APPPATH\Controllers\UserController.php on line 249.
+ 1 APPPATH\Controllers\UserController.php(249): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prooductmodel', 'D:\\laragon\\www\\bestSeller\\app\\Controllers\\UserController.php', 249)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->deletethistoo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\bestSeller\\public\\index.php')
+CRITICAL - 2023-10-01 19:28:35 --> Undefined variable $prooductmodel
+in APPPATH\Controllers\UserController.php on line 249.
+ 1 APPPATH\Controllers\UserController.php(249): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prooductmodel', 'D:\\laragon\\www\\bestSeller\\app\\Controllers\\UserController.php', 249)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->deletethistoo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\bestSeller\\public\\index.php')
+CRITICAL - 2023-10-01 19:31:12 --> Undefined property: App\Controllers\UserController::$prooductmodel
+in APPPATH\Controllers\UserController.php on line 249.
+ 1 APPPATH\Controllers\UserController.php(249): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\UserController::$prooductmodel', 'D:\\laragon\\www\\bestSeller\\app\\Controllers\\UserController.php', 249)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->deletethistoo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\bestSeller\\public\\index.php')
+CRITICAL - 2023-10-01 19:33:21 --> Undefined property: App\Controllers\UserController::$prooductmodel
+in APPPATH\Controllers\UserController.php on line 250.
+ 1 APPPATH\Controllers\UserController.php(250): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\UserController::$prooductmodel', 'D:\\laragon\\www\\bestSeller\\app\\Controllers\\UserController.php', 250)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->deletethistoo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\bestSeller\\public\\index.php')
+CRITICAL - 2023-10-01 19:33:28 --> Undefined property: App\Controllers\UserController::$prooductmodel
+in APPPATH\Controllers\UserController.php on line 250.
+ 1 APPPATH\Controllers\UserController.php(250): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\UserController::$prooductmodel', 'D:\\laragon\\www\\bestSeller\\app\\Controllers\\UserController.php', 250)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->deletethistoo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\bestSeller\\public\\index.php')
+CRITICAL - 2023-10-01 19:35:46 --> Undefined property: App\Controllers\UserController::$prooductmodel
+in APPPATH\Controllers\UserController.php on line 250.
+ 1 APPPATH\Controllers\UserController.php(250): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\UserController::$prooductmodel', 'D:\\laragon\\www\\bestSeller\\app\\Controllers\\UserController.php', 250)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->deletethistoo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\bestSeller\\public\\index.php')
+CRITICAL - 2023-10-01 19:38:09 --> Undefined property: App\Controllers\UserController::$prooductModel
+in APPPATH\Controllers\UserController.php on line 250.
+ 1 APPPATH\Controllers\UserController.php(250): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\UserController::$prooductModel', 'D:\\laragon\\www\\bestSeller\\app\\Controllers\\UserController.php', 250)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->deletethistoo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\bestSeller\\public\\index.php')
+CRITICAL - 2023-10-01 19:38:10 --> Undefined property: App\Controllers\UserController::$productmodel
+in APPPATH\Controllers\UserController.php on line 104.
+ 1 APPPATH\Controllers\UserController.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\UserController::$productmodel', 'D:\\laragon\\www\\bestSeller\\app\\Controllers\\UserController.php', 104)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->adminindex()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\bestSeller\\public\\index.php')
+CRITICAL - 2023-10-01 19:38:13 --> Undefined property: App\Controllers\UserController::$productmodel
+in APPPATH\Controllers\UserController.php on line 104.
+ 1 APPPATH\Controllers\UserController.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\UserController::$productmodel', 'D:\\laragon\\www\\bestSeller\\app\\Controllers\\UserController.php', 104)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->adminindex()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\bestSeller\\public\\index.php')
+CRITICAL - 2023-10-01 19:38:13 --> Undefined property: App\Controllers\UserController::$productmodel
+in APPPATH\Controllers\UserController.php on line 104.
+ 1 APPPATH\Controllers\UserController.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\UserController::$productmodel', 'D:\\laragon\\www\\bestSeller\\app\\Controllers\\UserController.php', 104)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->adminindex()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\bestSeller\\public\\index.php')
+CRITICAL - 2023-10-01 19:38:21 --> Undefined property: App\Controllers\UserController::$productmodel
+in APPPATH\Controllers\UserController.php on line 104.
+ 1 APPPATH\Controllers\UserController.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\UserController::$productmodel', 'D:\\laragon\\www\\bestSeller\\app\\Controllers\\UserController.php', 104)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->adminindex()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\bestSeller\\public\\index.php')
+CRITICAL - 2023-10-01 19:38:21 --> Undefined property: App\Controllers\UserController::$productmodel
+in APPPATH\Controllers\UserController.php on line 104.
+ 1 APPPATH\Controllers\UserController.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\UserController::$productmodel', 'D:\\laragon\\www\\bestSeller\\app\\Controllers\\UserController.php', 104)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->adminindex()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\bestSeller\\public\\index.php')
+CRITICAL - 2023-10-01 19:42:30 --> Undefined property: App\Controllers\UserController::$input
+in APPPATH\Controllers\UserController.php on line 219.
+ 1 APPPATH\Controllers\UserController.php(219): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\UserController::$input', 'D:\\laragon\\www\\bestSeller\\app\\Controllers\\UserController.php', 219)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->deleteProduct()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\bestSeller\\public\\index.php')
+CRITICAL - 2023-10-01 19:44:32 --> Cannot redeclare App\Controllers\UserController::__construct()
+in APPPATH\Controllers\UserController.php on line 18.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-01 19:44:57 --> Cannot call constructor
+in APPPATH\Controllers\UserController.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\UserController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\bestSeller\\public\\index.php')
+CRITICAL - 2023-10-01 19:50:27 --> Undefined property: App\Controllers\UserController::$input
+in APPPATH\Controllers\UserController.php on line 220.
+ 1 APPPATH\Controllers\UserController.php(220): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\UserController::$input', 'D:\\laragon\\www\\bestSeller\\app\\Controllers\\UserController.php', 220)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->deleteProduct()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\bestSeller\\public\\index.php')
+CRITICAL - 2023-10-01 19:51:16 --> Undefined property: App\Controllers\UserController::$prooductModel
+in APPPATH\Controllers\UserController.php on line 252.
+ 1 APPPATH\Controllers\UserController.php(252): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\UserController::$prooductModel', 'D:\\laragon\\www\\bestSeller\\app\\Controllers\\UserController.php', 252)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->deletethistoo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\bestSeller\\public\\index.php')
+CRITICAL - 2023-10-01 19:51:49 --> Undefined variable $prooductModel
+in APPPATH\Controllers\UserController.php on line 252.
+ 1 APPPATH\Controllers\UserController.php(252): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prooductModel', 'D:\\laragon\\www\\bestSeller\\app\\Controllers\\UserController.php', 252)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->deletethistoo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\bestSeller\\public\\index.php')
