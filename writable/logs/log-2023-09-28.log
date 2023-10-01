@@ -1,0 +1,468 @@
+CRITICAL - 2023-09-28 00:49:15 --> Undefined variable $menu
+in APPPATH\Views\Admin\adminindex.php on line 44.
+ 1 APPPATH\Views\Admin\adminindex.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'D:\\laragon\\www\\eCommerce\\app\\Views\\Admin\\adminindex.php', 44)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\eCommerce\\app\\Views\\Admin\\adminindex.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Admin/adminindex', [], true)
+ 5 APPPATH\Controllers\UserController.php(24): view('Admin/adminindex')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->adminindex()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+ERROR - 2023-09-28 00:51:41 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\laragon\www\eCommerce\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\laragon\www\eCommerce\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\laragon\www\eCommerce\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\laragon\www\eCommerce\app\Controllers\UserController.php(25): CodeIgniter\BaseModel->findAll()
+#7 D:\laragon\www\eCommerce\system\CodeIgniter.php(919): App\Controllers\UserController->adminindex()
+#8 D:\laragon\www\eCommerce\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 D:\laragon\www\eCommerce\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\eCommerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\eCommerce\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\laragon\www\eCommerce\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\laragon\www\eCommerce\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\laragon\www\eCommerce\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\laragon\www\eCommerce\app\Controllers\UserController.php(25): CodeIgniter\BaseModel->findAll()
+#6 D:\laragon\www\eCommerce\system\CodeIgniter.php(919): App\Controllers\UserController->adminindex()
+#7 D:\laragon\www\eCommerce\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 D:\laragon\www\eCommerce\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\eCommerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\eCommerce\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-28 00:51:41 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(25): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->adminindex()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+ERROR - 2023-09-28 00:54:22 --> mysqli_sql_exception: Column 'quantity' cannot be null in D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pr...', 0)
+#1 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 D:\laragon\www\eCommerce\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 D:\laragon\www\eCommerce\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\laragon\www\eCommerce\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 D:\laragon\www\eCommerce\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\laragon\www\eCommerce\app\Controllers\UserController.php(43): CodeIgniter\Model->insert(Array)
+#8 D:\laragon\www\eCommerce\system\CodeIgniter.php(919): App\Controllers\UserController->saveProduct()
+#9 D:\laragon\www\eCommerce\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#10 D:\laragon\www\eCommerce\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\laragon\www\eCommerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\laragon\www\eCommerce\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2023-09-28 00:54:22 --> Column 'quantity' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `products` (`code`, `quantity`, `productName`, `productDescription`, `createdAt`, `updatedAt`) VALUES (:code:, :quantity:, :productName:, :productDescription:, :createdAt:, :updatedAt:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\UserController.php(43): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->saveProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+ERROR - 2023-09-28 00:55:19 --> mysqli_sql_exception: Column 'quantity' cannot be null in D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pr...', 0)
+#1 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 D:\laragon\www\eCommerce\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 D:\laragon\www\eCommerce\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\laragon\www\eCommerce\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 D:\laragon\www\eCommerce\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\laragon\www\eCommerce\app\Controllers\UserController.php(43): CodeIgniter\Model->insert(Array)
+#8 D:\laragon\www\eCommerce\system\CodeIgniter.php(919): App\Controllers\UserController->saveProduct()
+#9 D:\laragon\www\eCommerce\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#10 D:\laragon\www\eCommerce\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\laragon\www\eCommerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\laragon\www\eCommerce\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2023-09-28 00:55:19 --> Column 'quantity' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `products` (`code`, `quantity`, `productName`, `productDescription`, `createdAt`, `updatedAt`) VALUES (:code:, :quantity:, :productName:, :productDescription:, :createdAt:, :updatedAt:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\UserController.php(43): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->saveProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-28 01:40:53 --> syntax error, unexpected token ";", expecting "]"
+in APPPATH\Controllers\UserController.php on line 56.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\eCommerce\\app\\Controllers\\UserController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\UserController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\UserController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\UserController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-28 01:42:01 --> Undefined variable $productmodel
+in APPPATH\Controllers\UserController.php on line 57.
+ 1 APPPATH\Controllers\UserController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productmodel', 'D:\\laragon\\www\\eCommerce\\app\\Controllers\\UserController.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->editProduct()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-28 03:50:11 --> Cannot redeclare App\Controllers\UserController::userindex()
+in APPPATH\Controllers\UserController.php on line 61.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-09-28 04:17:26 --> Invalid file: "User/jackets.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/jackets.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('User/jackets', [], true)
+ 3 APPPATH\Controllers\UserController.php(49): view('User/jackets')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->jackets()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-28 04:18:40 --> Invalid file: "User/bags.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/bags.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('User/bags', [], true)
+ 3 APPPATH\Controllers\UserController.php(44): view('User/bags')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->bags()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-28 04:21:04 --> Invalid file: "User/bags.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/bags.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('User/bags', [], true)
+ 3 APPPATH\Controllers\UserController.php(44): view('User/bags')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->bags()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+ERROR - 2023-09-28 05:24:16 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ecommerce', 3306, '', 0)
+#1 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\laragon\www\eCommerce\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\laragon\www\eCommerce\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\laragon\www\eCommerce\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\laragon\www\eCommerce\app\Controllers\UserController.php(30): CodeIgniter\BaseModel->findAll()
+#7 D:\laragon\www\eCommerce\system\CodeIgniter.php(919): App\Controllers\UserController->tshirts()
+#8 D:\laragon\www\eCommerce\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 D:\laragon\www\eCommerce\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\eCommerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\eCommerce\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\laragon\www\eCommerce\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\laragon\www\eCommerce\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\laragon\www\eCommerce\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\laragon\www\eCommerce\app\Controllers\UserController.php(30): CodeIgniter\BaseModel->findAll()
+#6 D:\laragon\www\eCommerce\system\CodeIgniter.php(919): App\Controllers\UserController->tshirts()
+#7 D:\laragon\www\eCommerce\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 D:\laragon\www\eCommerce\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\eCommerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\eCommerce\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-28 05:24:16 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+WHERE `productCategory` = :productCategory:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(30): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->tshirts()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+ERROR - 2023-09-28 05:24:38 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ecommerce', 3306, '', 0)
+#1 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\laragon\www\eCommerce\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\laragon\www\eCommerce\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\laragon\www\eCommerce\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\laragon\www\eCommerce\app\Controllers\UserController.php(30): CodeIgniter\BaseModel->findAll()
+#7 D:\laragon\www\eCommerce\system\CodeIgniter.php(919): App\Controllers\UserController->tshirts()
+#8 D:\laragon\www\eCommerce\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 D:\laragon\www\eCommerce\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\eCommerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\eCommerce\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\laragon\www\eCommerce\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\laragon\www\eCommerce\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\laragon\www\eCommerce\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\laragon\www\eCommerce\app\Controllers\UserController.php(30): CodeIgniter\BaseModel->findAll()
+#6 D:\laragon\www\eCommerce\system\CodeIgniter.php(919): App\Controllers\UserController->tshirts()
+#7 D:\laragon\www\eCommerce\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 D:\laragon\www\eCommerce\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\eCommerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\eCommerce\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-28 05:24:38 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+WHERE `productCategory` = :productCategory:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(30): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->tshirts()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-28 05:30:47 --> Undefined variable $products
+in APPPATH\Views\User\products.php on line 16.
+ 1 APPPATH\Views\User\products.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'D:\\laragon\\www\\eCommerce\\app\\Views\\User\\products.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\eCommerce\\app\\Views\\User\\products.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('User/products', [], true)
+ 5 APPPATH\Controllers\UserController.php(32): view('User/products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->tshirts()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-28 05:35:51 --> Undefined array key "productCategory"
+in APPPATH\Views\User\products.php on line 14.
+ 1 APPPATH\Views\User\products.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "productCategory"', 'D:\\laragon\\www\\eCommerce\\app\\Views\\User\\products.php', 14)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\eCommerce\\app\\Views\\User\\products.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('User/products', [], true)
+ 5 APPPATH\Controllers\UserController.php(64): view('User/products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->jackets()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-28 05:36:18 --> Undefined array key "productCategory"
+in APPPATH\Views\User\products.php on line 14.
+ 1 APPPATH\Views\User\products.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "productCategory"', 'D:\\laragon\\www\\eCommerce\\app\\Views\\User\\products.php', 14)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\eCommerce\\app\\Views\\User\\products.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('User/products', [], true)
+ 5 APPPATH\Controllers\UserController.php(64): view('User/products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->jackets()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-28 05:39:21 --> Undefined array key "productCategory"
+in APPPATH\Views\User\products.php on line 14.
+ 1 APPPATH\Views\User\products.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "productCategory"', 'D:\\laragon\\www\\eCommerce\\app\\Views\\User\\products.php', 14)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\eCommerce\\app\\Views\\User\\products.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('User/products', [], true)
+ 5 APPPATH\Controllers\UserController.php(64): view('User/products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->jackets()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-28 05:40:57 --> Undefined array key "productCategory"
+in APPPATH\Views\User\products.php on line 15.
+ 1 APPPATH\Views\User\products.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "productCategory"', 'D:\\laragon\\www\\eCommerce\\app\\Views\\User\\products.php', 15)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\eCommerce\\app\\Views\\User\\products.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('User/products', [], true)
+ 5 APPPATH\Controllers\UserController.php(32): view('User/products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->tshirts()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-28 05:41:39 --> Undefined array key "productCategory"
+in APPPATH\Views\User\products.php on line 15.
+ 1 APPPATH\Views\User\products.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "productCategory"', 'D:\\laragon\\www\\eCommerce\\app\\Views\\User\\products.php', 15)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\eCommerce\\app\\Views\\User\\products.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('User/products', [], true)
+ 5 APPPATH\Controllers\UserController.php(32): view('User/products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->tshirts()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+ERROR - 2023-09-28 09:04:12 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ecommerce', 3306, '', 0)
+#1 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\laragon\www\eCommerce\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\laragon\www\eCommerce\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\laragon\www\eCommerce\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\laragon\www\eCommerce\app\Controllers\UserController.php(21): CodeIgniter\BaseModel->findAll()
+#7 D:\laragon\www\eCommerce\system\CodeIgniter.php(919): App\Controllers\UserController->adminindex()
+#8 D:\laragon\www\eCommerce\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 D:\laragon\www\eCommerce\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\eCommerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\eCommerce\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\laragon\www\eCommerce\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\laragon\www\eCommerce\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\laragon\www\eCommerce\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\laragon\www\eCommerce\app\Controllers\UserController.php(21): CodeIgniter\BaseModel->findAll()
+#6 D:\laragon\www\eCommerce\system\CodeIgniter.php(919): App\Controllers\UserController->adminindex()
+#7 D:\laragon\www\eCommerce\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 D:\laragon\www\eCommerce\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\eCommerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\eCommerce\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-28 09:04:12 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(21): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->adminindex()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+ERROR - 2023-09-28 09:04:35 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ecommerce', 3306, '', 0)
+#1 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\laragon\www\eCommerce\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\laragon\www\eCommerce\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\laragon\www\eCommerce\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\laragon\www\eCommerce\app\Controllers\UserController.php(21): CodeIgniter\BaseModel->findAll()
+#7 D:\laragon\www\eCommerce\system\CodeIgniter.php(919): App\Controllers\UserController->adminindex()
+#8 D:\laragon\www\eCommerce\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 D:\laragon\www\eCommerce\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\eCommerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\eCommerce\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\laragon\www\eCommerce\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\laragon\www\eCommerce\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\laragon\www\eCommerce\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\laragon\www\eCommerce\app\Controllers\UserController.php(21): CodeIgniter\BaseModel->findAll()
+#6 D:\laragon\www\eCommerce\system\CodeIgniter.php(919): App\Controllers\UserController->adminindex()
+#7 D:\laragon\www\eCommerce\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 D:\laragon\www\eCommerce\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\eCommerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\eCommerce\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-28 09:04:35 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(21): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->adminindex()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-28 09:09:54 --> Undefined array key "price"
+in APPPATH\Views\Admin\adminindex.php on line 59.
+ 1 APPPATH\Views\Admin\adminindex.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "price"', 'D:\\laragon\\www\\eCommerce\\app\\Views\\Admin\\adminindex.php', 59)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\eCommerce\\app\\Views\\Admin\\adminindex.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Admin/adminindex', [], true)
+ 5 APPPATH\Controllers\UserController.php(23): view('Admin/adminindex', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->adminindex()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-28 13:20:43 --> Class "App\Controllers\AdminModel" not found
+in APPPATH\Controllers\UserController.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->loginAuth()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-28 13:23:17 --> Call to undefined function set_value()
+in APPPATH\Views\Admin\login.php on line 45.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Admin/login', [], true)
+ 4 APPPATH\Controllers\UserController.php(68): view('Admin/login')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->login()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-28 13:25:03 --> Call to undefined function set_value()
+in APPPATH\Views\Admin\login.php on line 45.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Admin/login', [], true)
+ 4 APPPATH\Controllers\UserController.php(68): view('Admin/login')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->login()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-28 13:25:30 --> Call to undefined function set_value()
+in APPPATH\Views\Admin\login.php on line 45.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Admin/login', [], true)
+ 4 APPPATH\Controllers\UserController.php(68): view('Admin/login')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->login()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-28 13:35:24 --> Cannot redeclare App\Controllers\UserController::index()
+in APPPATH\Controllers\UserController.php on line 25.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

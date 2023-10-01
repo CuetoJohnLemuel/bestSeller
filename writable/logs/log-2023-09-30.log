@@ -1,0 +1,163 @@
+ERROR - 2023-09-30 08:44:23 --> mysqli_sql_exception: Table 'ecommerce.users' doesn't exist in D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 D:\laragon\www\eCommerce\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\laragon\www\eCommerce\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\laragon\www\eCommerce\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('paulynfamilara@...', 'email', Array, NULL, 'email')
+#6 D:\laragon\www\eCommerce\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'paulynfamilara@...', Array, Array)
+#7 D:\laragon\www\eCommerce\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 D:\laragon\www\eCommerce\app\Controllers\UserController.php(41): CodeIgniter\Controller->validate(Array)
+#9 D:\laragon\www\eCommerce\system\CodeIgniter.php(919): App\Controllers\UserController->store()
+#10 D:\laragon\www\eCommerce\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 D:\laragon\www\eCommerce\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\laragon\www\eCommerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 D:\laragon\www\eCommerce\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-30 08:44:23 --> Table 'ecommerce.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('paulynfamilara@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'paulynfamilara@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(41): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-30 08:44:48 --> Class "App\Controllers\AdminModel" not found
+in APPPATH\Controllers\UserController.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->store()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+ERROR - 2023-09-30 08:45:21 --> mysqli_sql_exception: Unknown column 'updatedAt' in 'field list' in D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ad...', 0)
+#1 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ad...')
+#2 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ad...')
+#3 D:\laragon\www\eCommerce\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ad...', Array, false)
+#4 D:\laragon\www\eCommerce\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\laragon\www\eCommerce\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 D:\laragon\www\eCommerce\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\laragon\www\eCommerce\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 D:\laragon\www\eCommerce\app\Controllers\UserController.php(48): CodeIgniter\BaseModel->save(Array)
+#9 D:\laragon\www\eCommerce\system\CodeIgniter.php(919): App\Controllers\UserController->store()
+#10 D:\laragon\www\eCommerce\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 D:\laragon\www\eCommerce\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\laragon\www\eCommerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 D:\laragon\www\eCommerce\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-30 08:45:21 --> Unknown column 'updatedAt' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admin` (`name`, `email`, `password`, `created_at`, `updatedAt`) VALUES (:name:, :email:, :password:, :created_at:, :updatedAt:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\UserController.php(48): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+ERROR - 2023-09-30 09:19:46 --> mysqli_sql_exception: Column 'productImage' cannot be null in D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\laragon\www\eCommerce\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pr...', 0)
+#1 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 D:\laragon\www\eCommerce\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 D:\laragon\www\eCommerce\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 D:\laragon\www\eCommerce\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\laragon\www\eCommerce\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 D:\laragon\www\eCommerce\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\laragon\www\eCommerce\app\Controllers\UserController.php(178): CodeIgniter\Model->insert(Array)
+#8 D:\laragon\www\eCommerce\system\CodeIgniter.php(919): App\Controllers\UserController->saveProduct()
+#9 D:\laragon\www\eCommerce\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#10 D:\laragon\www\eCommerce\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\laragon\www\eCommerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\laragon\www\eCommerce\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2023-09-30 09:19:47 --> Column 'productImage' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `products` (`code`, `quantity`, `productName`, `productPrice`, `productDescription`, `productImage`, `productCategory`, `createdAt`, `updatedAt`) VALUES (:code:, :quantity:, :productName:, :productPrice:, :productDescription:, :productImage:, :productCategory:, :createdAt:, :updatedAt:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\UserController.php(178): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->saveProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-30 09:59:16 --> Undefined variable $myNamePhoto
+in APPPATH\Controllers\UserController.php on line 170.
+ 1 APPPATH\Controllers\UserController.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $myNamePhoto', 'D:\\laragon\\www\\eCommerce\\app\\Controllers\\UserController.php', 170)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->saveProduct()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-30 10:00:08 --> Undefined variable $myNamePhoto
+in APPPATH\Controllers\UserController.php on line 171.
+ 1 APPPATH\Controllers\UserController.php(171): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $myNamePhoto', 'D:\\laragon\\www\\eCommerce\\app\\Controllers\\UserController.php', 171)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->saveProduct()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-30 19:17:09 --> Cannot access offset of type string on string
+in APPPATH\Views\Admin\adminindex.php on line 89.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Admin/adminindex', [], true)
+ 4 APPPATH\Controllers\UserController.php(105): view('Admin/adminindex', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->adminindex()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-30 20:21:16 --> Unclosed '{' on line 6
+in APPPATH\Controllers\UserController.php on line 215.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\eCommerce\\app\\Controllers\\UserController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\UserController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\UserController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\UserController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-30 20:21:16 --> Unclosed '{' on line 6
+in APPPATH\Controllers\UserController.php on line 215.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\eCommerce\\app\\Controllers\\UserController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\UserController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\UserController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\UserController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-30 20:21:59 --> Unclosed '{' on line 6
+in APPPATH\Controllers\UserController.php on line 214.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\eCommerce\\app\\Controllers\\UserController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\UserController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\UserController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\UserController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
+CRITICAL - 2023-09-30 21:17:54 --> Undefined property: App\Controllers\UserController::$input
+in APPPATH\Controllers\UserController.php on line 218.
+ 1 APPPATH\Controllers\UserController.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\UserController::$input', 'D:\\laragon\\www\\eCommerce\\app\\Controllers\\UserController.php', 218)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->deleteProduct()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\eCommerce\\public\\index.php')
